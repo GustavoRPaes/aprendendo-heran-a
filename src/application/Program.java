@@ -11,7 +11,7 @@ public class Program {
 		Account acc = new Account(1001, "Alex", 1000.0);
 		acc.withdraw(200.0);
 		System.out.println(acc.getBalance());
-		
+
 		Account acc1 = new SavingAccount(999, "Pedro", 1000.0, 0.01);
 		acc1.withdraw(200.0);
 		System.out.println(acc1.getBalance());
@@ -42,6 +42,17 @@ public class Program {
 			System.out.println("Update!!");
 			;
 		}
+
+		// Aplicando polimorfismo
+
+		Account x = new Account(1020, "Alex", 1000.0);
+		Account y = new SavingAccount(1023, "Laiara", 1000.0, 0.01);
+
+		x.withdraw(50.0);
+		y.withdraw(50.0);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
 	}
 
 }
